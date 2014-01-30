@@ -71,7 +71,7 @@ def window_search():
 	
 	create_results(destination,response)
 	
-	save = raw_input('\nSave a copy of the search terms used? (Type "yes" or "y")').lower()
+	save = raw_input('\nWould you like to save a copy of the search terms used?\nIf so, enter "yes" or "y"\nIf not, enter anything else.\n').lower()
 	
 	if save == 'yes' or save == 'y':
 		save_search(destination,state,call_sign,city,url)
@@ -82,7 +82,7 @@ def list_search():
 	
 	list_format = ''
 	while list_format != '1' and list_format != '2' and list_format != '3':
-		list_format = raw_input('\nEnter 1 if searching by city, 2 if searching by state, or 3 if searching by call sign.\n')
+		list_format = raw_input('\nEnter 1 if searching by city.\nEnter 2 if searching by state.\nEnter 3 if searching by call sign.\n')
 	
 	"""Declaring the name of the file being created"""
 	print '\nThe search results will be saved in a .txt file.\nIf you use the name of an existing file, the original will be overwritten.\n'
@@ -124,10 +124,10 @@ def list_search():
 	
 def create_search():
 	"""Decide the type of search, either read from a list in a .txt file or take data entry"""
-	print 'You may perform your search in one of two ways:  You can enter search terms here, or the terms can be read from a list.'
+	print 'You may perform your search in one of two ways:\nYou can enter search terms here, or the terms can be read from a list.'
 	
 	search_type = '3'
-	print 'Enter 1 to enter search terms here.\nEnter 2 to have the terms read from a list.\nEnter 3 to learn about the list format requirments.\n'
+	print '\nEnter 1 to enter search terms here.\nEnter 2 to have the terms read from a list.\nEnter 3 to learn about the list format requirments.\n'
 	
 	while search_type == '3':
 		search_type = raw_input()
@@ -147,5 +147,5 @@ def create_search():
 	
 while searching == 'yes' or searching == 'y':
 	create_search()
-	searching = raw_input('\nWould you like to perform another search? If so, type "yes" or "y"\n').lower()
+	searching = raw_input('\nWould you like to perform another search?\nIf so, enter "yes" or "y"\nIf not, enter anything else.\n').lower()
 	print '\n\n'

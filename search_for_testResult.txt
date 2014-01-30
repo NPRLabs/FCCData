@@ -1,0 +1,7 @@
+Search used to create testResult.txt.
+Date:  2014-01-30
+
+URL: http://transition.fcc.gov/fcc-bin/fmq?state=AK&call=KW&city=&arn=&serv=FM&vac=&freq=0.0&fre2=107.9&facid=&class=&dkt=&list=4&dist=&dlat2=&mlat2=&slat2=&NS=N&dlon2=&mlon2=&slon2=&EW=W&size=9
+
+State: AK
+Call Sign: KW
