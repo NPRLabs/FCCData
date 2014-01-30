@@ -10,5 +10,6 @@ testList.txt:
  
 
 Some features to consider adding.  The script should:
--Add headers to the columns
+
 -Create an .xls (excel spreadsheet) file without manual assistance.
+-look into checking for changes made to old results

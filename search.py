@@ -31,10 +31,7 @@ searching = 'yes'
 """Save the results in a .txt file"""
 def create_results(name,response):
 	file = open(name,"a")
-	if response == '\n':
-		file.write('Nothing found using your search terms.') 
-	else:
-		file.write(response)
+	file.write(response)
 	file.close()
 	
 """Saves a .txt file that records all of the search terms used"""
@@ -67,9 +64,16 @@ def window_search():
 	
 	url = 'http://transition.fcc.gov/fcc-bin/fmq?state=' + state + '&call=' + call_sign + '&city=' + city + '&arn=' + application_file_number + '&serv=' + service + '&vac=' + record_types + '&freq=' + lower_frequency + '&fre2=' + upper_frequency + '&facid=' + facility_id + '&class=' + class_ + '&dkt=' + docket_number + '&list=' + list_type + '&dist=' + radius + '&dlat2=' + latitude_degrees + '&mlat2='+ latitude_minutes + '&slat2=' + latitude_seconds + '&NS=' + north_south + '&dlon2=' + longitude_degrees + '&mlon2=' + longitude_minutes + '&slon2=' + longitude_seconds + '&EW=' + east_west + '&size=' + size
 	
+	header = "|Callsign|Frequency|Service|Channel|Directional Antenna (DA) or NonDirectional (ND)|Hours of Operation for this record - Daytime, Nighttime, or Unlimited|FM Station Class|International Station Class|FM Status|City|State|Country|File Number (Application, Construction Permit or License) or Docket Number (Rulemaking)|Effective Radiated Power -- horizontally polarized  (maximum)|Effective Radiated Power -- vertically polarized  (maximum)|Antenna Height Above Average Terrain (HAAT) -- horizontal polarization|Antenna Height Above Average Terrain (HAAT) -- vertical polarization|Facility ID Number (unique to each station)|N (North) or S (South) Latitude|Degrees Latitude|Minutes Latitude|Seconds Latitude|W (West) or (E) East Longitude|Degrees Longitude|Minutes Longitude|Seconds Longitude|Licensee or Permittee|Kilometers distant (radius) from entered latitude, longitude|Miles distant (radius) from entered latitude, longitude|Azimuth, looking from center Lat, Lon to this record's Lat, Lon|Antenna Radiation Center Above Mean Sea Level (RCAMSL) - Horizontally Polarized - meters|Antenna Radiation Center Above Mean Sea Level (RCAMSL) - Vertically Polarized - meters|Directional Antenna ID Number|Directional Antenna Pattern Rotation (degrees)|Antenna Structure Registration Number|Height of antenna radiation center above ground level (maximum) (physical center of the antenna)|Application ID number (from CDBS database)\n"
+	
 	response = urllib.urlopen ( url ).read()
 	
-	create_results(destination,response)
+	if response == '\n':
+		raw_input('Nothing found using your search terms.  (Press Enter to continue.)') 
+	else:
+		response = header + response
+	
+		create_results(destination,response)
 	
 	save = raw_input('\nWould you like to save a copy of the search terms used?\nIf so, enter "yes" or "y"\nIf not, enter anything else.\n').lower()
 	
@@ -82,13 +86,13 @@ def list_search():
 	
 	list_format = ''
 	while list_format != '1' and list_format != '2' and list_format != '3':
-		list_format = raw_input('\nEnter 1 if searching by city.\nEnter 2 if searching by state.\nEnter 3 if searching by call sign.\n')
+		list_format = raw_input('\nEnter 1 if searching by city.\nEnter 2 if searching by state.\nEnter 3 if searching by callsign.\n\n')
 	
 	"""Declaring the name of the file being created"""
 	print '\nThe search results will be saved in a .txt file.\nIf you use the name of an existing file, the original will be overwritten.\n'
 	destination = raw_input ( 'Destination File Name (Do not include extension):  ' ) + '.txt'
 	
-	print 'Processing...'
+	print '\nProcessing...\n'
 	
 	list_file = open(source,"r")
 
@@ -96,13 +100,20 @@ def list_search():
 
 	list_file.close()
 	
+	header = "|Callsign|Frequency|Service|Channel|Directional Antenna (DA) or NonDirectional (ND)|Hours of Operation for this record - Daytime, Nighttime, or Unlimited|FM Station Class|International Station Class|FM Status|City|State|Country|File Number (Application, Construction Permit or License) or Docket Number (Rulemaking)|Effective Radiated Power -- horizontally polarized  (maximum)|Effective Radiated Power -- vertically polarized  (maximum)|Antenna Height Above Average Terrain (HAAT) -- horizontal polarization|Antenna Height Above Average Terrain (HAAT) -- vertical polarization|Facility ID Number (unique to each station)|N (North) or S (South) Latitude|Degrees Latitude|Minutes Latitude|Seconds Latitude|W (West) or (E) East Longitude|Degrees Longitude|Minutes Longitude|Seconds Longitude|Licensee or Permittee|Kilometers distant (radius) from entered latitude, longitude|Miles distant (radius) from entered latitude, longitude|Azimuth, looking from center Lat, Lon to this record's Lat, Lon|Antenna Radiation Center Above Mean Sea Level (RCAMSL) - Horizontally Polarized - meters|Antenna Radiation Center Above Mean Sea Level (RCAMSL) - Vertically Polarized - meters|Directional Antenna ID Number|Directional Antenna Pattern Rotation (degrees)|Antenna Structure Registration Number|Height of antenna radiation center above ground level (maximum) (physical center of the antenna)|Application ID number (from CDBS database)\n"
+	
+	create_results(destination,header)
+	
 	if list_format == '1':
 		for each in list_array:
 			url = 'http://transition.fcc.gov/fcc-bin/fmq?state=&call=&city=' + each + '&arn=&serv=FM&vac=&freq=0.0&fre2=107.9&facid=&class=&dkt=&list=4&dist=&dlat2=&mlat2=&slat2=&NS=N&dlon2=&mlon2=&slon2=&EW=W&size=9'
 	
 			response = urllib.urlopen ( url ).read()
-	
-			create_results(destination,response)
+			
+			if response == '\n':
+				print 'Nothing found using the search term "' + each + '".\n'
+			else:
+				create_results(destination,response)
 		
 	elif list_format == '2':
 		for each in list_array:
@@ -110,7 +121,10 @@ def list_search():
 	
 			response = urllib.urlopen ( url ).read()
 		
-			create_results(destination,response)
+			if response == '\n':
+				print 'Nothing found using the search term "' + each + '".\n'
+			else:
+				create_results(destination,response)
 			
 	elif list_format == '3':
 		for each in list_array:
@@ -119,7 +133,10 @@ def list_search():
 	
 			response = urllib.urlopen ( url ).read()
 	
-			create_results(destination,response)		
+			if response == '\n':
+				print 'Nothing found using the search term "' + each + '".\n'
+			else:
+				create_results(destination,response)		
 	
 	
 def create_search():
