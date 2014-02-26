@@ -1,0 +1,24 @@
+************************************
+Search Date:  2014-02-26
+Seach Time:  03:08:46
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.the if statement works
+
+************************************
+Search Date:  2014-02-26
+Seach Time:  03:08:06
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+

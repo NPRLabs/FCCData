@@ -20,12 +20,14 @@ Some features to consider adding.  The script should:
 
 Things to overcome with change checking:
 
--figure out how cron job works
+
 -Ignore headers
 -making a note to say what was changed and what it used to be (include dates); maybe but in a single changelog?
 -making changes to the master .txt list
 -what to do if a field is added?  This has happened 4 times since 2003
 -save stuff to a variable first, and then add to a file all at once?
+-turn the results into an array deliminated by "\n" on arrays deliminated by "|"
+--the inner arrays should have 37 columns
 
 1.  read 'yesterday's search'
 2.  save to variable
