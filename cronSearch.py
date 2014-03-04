@@ -1,6 +1,7 @@
 import urllib
 from datetime import date
 import time
+from sets import Set
 
 """Declaring the search variables"""
 state = ''
@@ -87,9 +88,9 @@ def list_search():
 	new_results = open(destination,"r").read()
 	
 	#put this if back in place when done debugging
-	#if old_results != new_results:
-	changes = compare_results(old_results,new_results)
-	notes = notes + "\nA change was made to the old data." + changes
+	if old_results != new_results:
+		changes = compare_results(old_results,new_results)
+		notes = notes + "\nA change was made to the old data." + changes
 		
 	
 	log_entry(source,terms,notes)
@@ -99,11 +100,15 @@ def compare_results(old,new):
 	oldie = txt_to_array(old)
 	newbie = txt_to_array(new)
 	note = ""
-	for row in range(len(oldie)):
-		if oldie[row] != newbie[row]:
-			note = "the if statement works"
-			note = "\nA change has been made to row number " + str(row) + ", which starts with "
-	raw_input(note)
+	
+	for oldRow in oldie:
+		match = False
+		for newRow in newbie:
+			if newRow == oldRow:
+				match = True
+		if match == False:
+			note = str(note) + "\nA change has been made to the row for Facility ID " + str(oldRow[18])
+	
 	return note
 	
 	

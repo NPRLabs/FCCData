@@ -1,4 +1,250 @@
 ************************************
+Search Date:  2014-03-04
+Seach Time:  10:53:43
+
+Search created using testList.txt.
+Search Terms: GA,
+
+Notes:
+
+A change was made to the old data.
+A change has been made to the row for Facility ID 23927      
+A change has been made to the row for Facility ID 90341      
+A change has been made to the row for Facility ID 23959      
+A change has been made to the row for Facility ID 22871      
+
+************************************
+Search Date:  2014-03-04
+Seach Time:  10:51:53
+
+Search created using testList.txt.
+Search Terms: GA,
+
+Notes:
+
+A change was made to the old data.
+A change has been made to the row for Facility ID 23927      
+
+************************************
+Search Date:  2014-03-04
+Seach Time:  10:49:32
+
+Search created using testList.txt.
+Search Terms: GA,
+
+Notes:
+
+
+************************************
+Search Date:  2014-03-04
+Seach Time:  10:48:33
+
+Search created using testList.txt.
+Search Terms: GA,
+
+Notes:
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-03-04
+Seach Time:  10:47:07
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+
+************************************
+Search Date:  2014-03-04
+Seach Time:  10:45:01
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-03-04
+Seach Time:  10:43:23
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+A change has been made to the row for Facility ID 23953      
+
+************************************
+Search Date:  2014-03-04
+Seach Time:  10:42:14
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-02-28
+Seach Time:  01:24:08
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+A change has been made to row number blup, which has the Facility ID 
+
+************************************
+Search Date:  2014-02-28
+Seach Time:  01:12:53
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+A change has been made to row number 0, which has the Facility ID 
+
+************************************
+Search Date:  2014-02-28
+Seach Time:  11:40:17
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-02-28
+Seach Time:  11:38:49
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-02-28
+Seach Time:  11:01:55
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-02-28
+Seach Time:  10:57:30
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-02-28
+Seach Time:  10:26:39
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+A change has been made to row number 3, which has the callsign 122086     
+
+************************************
+Search Date:  2014-02-27
+Seach Time:  10:14:06
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+A change has been made to row number 5, which starts with bluuuur      
+
+************************************
+Search Date:  2014-02-27
+Seach Time:  10:11:49
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
+Search Date:  2014-02-27
+Seach Time:  10:08:25
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+A change has been made to row number 345, which starts with 
+
+************************************
+Search Date:  2014-02-27
+Seach Time:  10:07:33
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+A change has been made to row number 4, which starts with 
+
+************************************
+Search Date:  2014-02-27
+Seach Time:  10:06:40
+
+Search created using testList.txt.
+Search Terms: GA,WNYC
+
+Notes:
+Nothing found using the search term "WNYC".
+
+A change was made to the old data.
+
+************************************
 Search Date:  2014-02-26
 Seach Time:  03:08:46
 
